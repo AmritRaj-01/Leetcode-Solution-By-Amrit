@@ -19,15 +19,15 @@ class Solution {
             size++;
         }
         
-        k=k%size;
+        k=k%size;   // agar size length se bada ho phir iss se length chota ho jayega 
         if(k==0) return head;
 
-        ListNode curr=head;
+        ListNode curr=head;     // jitna size hoga uss se 1 kam tak ruk jayega 
         for(int i=0;i<size-k-1;i++){
             curr=curr.next;
         }
 
-        ListNode newhead=curr.next;
+        ListNode newhead=curr.next; 
         curr.next=null;
         tail.next=head;
          
